@@ -1,0 +1,14 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    flage=True
+    arr=sorted(arr,reverse=True)
+    for i in range(1,n):
+        if arr[i-1]>arr[i]:
+            flage=False
+            print(arr[i])
+            break
+    if flage:
+        print(arr[i])
+         
+    
