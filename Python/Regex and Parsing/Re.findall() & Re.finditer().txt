@@ -1,0 +1,9 @@
+import re 
+n=input()
+regex=re.compile(r"(?<=[QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm])[AEIOUaeiou]{2,}[QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm]")
+matcher=re.findall(regex,n)
+if matcher!=[]:
+    for i in matcher:
+        print(i[0:-1])
+else:
+    print("-1")

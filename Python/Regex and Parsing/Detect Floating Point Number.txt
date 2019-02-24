@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re 
+T=int(input())
+lst=[]
+for i in range(0,T):
+    lst.append(input())
+regex=re.compile(r'^[+-]?(((\d+\.\d+)?)|\.\d+)([eE][+-]?\d+)?$')
+for i in lst:
+    if regex.search(i):
+        print("True")
+    else:
+        print("False")
